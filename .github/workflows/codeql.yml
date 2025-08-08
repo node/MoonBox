@@ -71,6 +71,9 @@ jobs:
     #     maven clean install 
     #     cd /moonbox-agent/moonbox-java-agent/bin
     #     sh ./install-local-agent.sh
+    - name: Build with Maven
+      run: mvn clean install -DskipTests
+      
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
